@@ -1,1 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>New Year Surprise 🎉</title>
+<style>
+  body { 
+    margin: 0; 
+    font-family: Arial, sans-serif; 
+    background: #111; 
+    color: #fff; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
+    text-align: center; 
+    overflow-x: hidden;
+  }
+  .container { max-width: 400px; padding: 20px; }
+  .ticket, .photo, .letter { background: #222; border-radius: 15px; padding: 20px; margin: 20px 0; cursor: pointer; }
+  h1, h2 { margin: 10px 0; }
+  .hidden { display: none; }
+  img { max-width: 100%; border-radius: 15px; margin: 10px 0; }
+</style>
+</head>
+<body>
+<div class="container">
 
+  <!-- GOLDEN TICKET -->
+  <div class="ticket" id="ticket">
+    <h1>🎫 GOLDEN TICKET</h1>
+    <p>VALID FOR EVERY DAY AHEAD</p>
+    <p>"Unlimited Love & Smiles"</p>
+    <p>No expiration date</p>
+    <button onclick="claimTicket()">CLAIM TICKET</button>
+  </div>
+
+  <!-- PHOTO MEMORIES -->
+  <div id="photos" class="hidden">
+    <h2>Some memories from this year</h2>
+    <img src="https://photos.app.goo.gl/tJCZBghwtHUT6mxz6" alt="Memory 1">
+    <img src="https://photos.app.goo.gl/Ng4AGVCvTc1qHXV8A" alt="Memory 2">
+    <img src="https://photos.app.goo.gl/QiFfctPHjVhyUug89" alt="Memory 3">
+    <button onclick="showLetter()">Next</button>
+  </div>
+
+  <!-- HAPPY NEW YEAR LETTER -->
+  <div id="letter" class="hidden">
+    <h2>💌 A Little Surprise for You</h2>
+    <p>Before this year begins, I want you to know...</p>
+    <p>May every day ahead be full of love, joy & smiles!</p>
+    <p>— <strong>My Soul</strong> 💛</p>
+  </div>
+
+</div>
+
+<script>
+function claimTicket() {
+  document.getElementById('ticket').classList.add('hidden');
+  document.getElementById('photos').classList.remove('hidden');
+}
+
+function showLetter() {
+  document.getElementById('photos').classList.add('hidden');
+  document.getElementById('letter').classList.remove('hidden');
+}
+</script>
+
+</body>
+  </html>
