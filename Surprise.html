@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>New Year Surprise 💛</title>
+<style>
+body { 
+  margin: 0; 
+  font-family: Arial, sans-serif; 
+  background: #111; 
+  color: #fff; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  min-height: 100vh; 
+  text-align: center; 
+}
+.container { max-width: 400px; padding: 20px; }
+.ticket, .letter { 
+  background: #222; 
+  border-radius: 15px; 
+  padding: 20px; 
+  margin: 20px 0; 
+}
+button { 
+  margin-top: 15px; 
+  padding: 10px 20px; 
+  border: none; 
+  border-radius: 10px; 
+  background: #ffcc70; 
+  color: #111; 
+  font-weight: bold; 
+  cursor: pointer; 
+}
+.hidden { display: none; }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- SURPRISE TITLE & GOLDEN TICKET -->
+  <div class="ticket" id="ticket">
+    <h1>🎉 Surprise for You 💛</h1>
+    <h2>🎫 Your Golden Ticket</h2>
+    <p>Tap to claim unlimited love 💛</p>
+    <button onclick="showLetter()">Claim Ticket</button>
+  </div>
+
+  <!-- HAPPY NEW YEAR LETTER -->
+  <div class="letter hidden" id="letter">
+    <h2>💌 Happy New Year!</h2>
+    <p>My Soul,</p>
+    <p>Every moment with you this year was special.</p>
+    <p>May the new year bring you endless love and joy 💛</p>
+    <p>Always yours 💛</p>
+  </div>
+
+</div>
+
+<script>
+function showLetter() {
+  document.getElementById("ticket").classList.add("hidden");
+  document.getElementById("letter").classList.remove("hidden");
+}
+</script>
+
+</body>
+  </html>
